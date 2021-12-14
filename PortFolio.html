@@ -13,9 +13,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
     <link href="portfolio.css" rel="stylesheet" type="text/css">
     <title>Portfolio</title>
 </head>
@@ -27,13 +34,30 @@
         <div class="col-4 ">
             <img src="img/moi-removebg.png"/>
         </div>
-        <div class="col-4 ">
-            <h2 class="text-center"> Résumé </h2>
-            <p> Je suis en alternance chez Xefi Software </p>
+        <div class="col-4 m-auto">
+            <h2 class="text-center p-2"> Résumé </h2>
+            <p> Intéressé par l'informatique , j'ai commencé par développer des petits jeux lors de mes années de lycée
+                en JAVA.
+                Puis j'ai fait un bachelor informatique à l'EPSI , pour agrandir mes connaissances et me spécialisé dans
+                le développement.
+                Après 2 année à l'EPSI , j'effectue ma 3ème année en alternance chez XEFI Software afin d'être au plus
+                proche du métier de développeur
+                et aggrandir mon domaine de compétence .</p>
 
         </div>
-        <div class="col-4 ">
-            <h2> Expérience </h2>
+        <div class="col-4 m-auto ">
+            <h2 class="text-center p-2"> Expériences </h2>
+            <div class="row-4 d-flex flex-column">
+                <h4>NovaDigital</h4>
+                <p> Stage développement web</p>
+                <p> Refonte Site web : HTML , CSS , JAVASCRIPT et PHP</p>
+            </div>
+            <div class="row-4 d-flex flex-column">
+                <h4>XEFI Software</h4>
+                <p> Alternance Full Stack</p>
+                <p> Configurateur TA : Blazor C# .NET CORE </p>
+                <p> SageReaderAccess : API C# .NET CORE </p>
+            </div>
         </div>
     </div>
 </div>
@@ -42,13 +66,15 @@
     <div class="carousel slide w-auto" id="carousel" data-ride="carousel">
         <div class="carousel-inner ">
             <div class="carousel-item active ">
-                <a href="https://configurateur.triumph-adler.fr/"> <img class="text-center img-fluid w-75 " href="https://configurateur.triumph-adler.fr/"
-                     src="img/configurateur%20TA.PNG"></a>
+                <h3> Configurateur TA </h3>
+                <a href="https://configurateur.triumph-adler.fr/"> <img class="text-center img-fluid w-75 "
+                                                                        href="https://configurateur.triumph-adler.fr/"
+                                                                        src="img/configurateur%20TA.PNG"></a>
             </div>
-            <div class="carousel-item ">
-                <a href="https://configurateur.triumph-adler.fr/"><img class="text-center img-fluid w-75 "
-                                                                       src="img/imprimante.PNG"></a>
+            <div>
+
             </div>
+
         </div>
         <a class="carousel-control-prev " href="#carousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon " aria-hidden="true"></span>
@@ -95,6 +121,10 @@
             <td> CSS</td>
             <td> Expérimenté</td>
         </tr>
+        <tr>
+            <td> SQL</td>
+            <td> Expérimenté</td>
+        </tr>
         </tbody>
     </table>
 </div>
@@ -110,13 +140,34 @@
         <div class="col-6">
             <h3> M'envoyer un message</h3>
             <form>
-
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <button type="button" data-bs-toggle="modal" id="valid" data-bs-target="#validation"
+                        class="btn btn-primary">Envoyer
+                </button>
             </form>
+            <div class="modal" id="validation" aria-labelledby="validate" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="validate">Message</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Votre message a bien été envoyer</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<footer class="bottom text-center " style="background-color: white">
-    <h1> Créé par Amaury DUPONT </h1>
-</footer>
+    <footer class="bottom text-center " style="background-color: white">
+        <h1> Créé par Amaury DUPONT </h1>
+    </footer>
 </body>
 </html>
